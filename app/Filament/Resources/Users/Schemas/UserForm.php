@@ -29,7 +29,6 @@ class UserForm
                     ->imageEditor()
                     ->hiddenLabel()
                     ->circleCropper()
-                    ->disk('public')
                     ->directory('avatars')
                     ->maxSize(1024)
                     ->required(),

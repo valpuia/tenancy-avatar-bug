@@ -20,6 +20,8 @@ class Team extends Model implements HasAvatar
 
     public function getFilamentAvatarUrl(): ?string
     {
-        return Storage::temporaryUrl($this->avatar_path, now()->addMinutes(5));
+        return $this->avatar_path
+            ? Storage::temporaryUrl($this->avatar_path, now()->addMinutes(5))
+            : null;
     }
 }
