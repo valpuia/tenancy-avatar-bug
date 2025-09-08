@@ -5,6 +5,7 @@ namespace App\Models;
 use Filament\Models\Contracts\HasAvatar;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Team extends Model implements HasAvatar
 {
@@ -19,6 +20,6 @@ class Team extends Model implements HasAvatar
 
     public function getFilamentAvatarUrl(): ?string
     {
-        return $this->avatar_path;
+        return Storage::temporaryUrl($this->avatar_path, now()->addMinutes(5));
     }
 }
