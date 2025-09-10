@@ -1,0 +1,28 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+.fi-simple-main {
+  @apply border-none rounded-none shadow-amber-200/50;
+}
+
+.fi-input-wrp,
+.fi-btn,
+.fi-checkbox-input,
+.fi-sidebar-item-btn,
+.fi-modal-window,
+.fi-dropdown-panel,
+.fi-section,
+.fi-active,
+.fi-ta-ctn {
+  @apply rounded-none;
+}
+
+.fi-tenant-menu-trigger:hover {
+  border-radius: 0;
+}
+
+/* .fi-main {
+  @apply border-l-2 border-amber-200/50;
+} */
